@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:is="http://tutorialscomponents.com/example">
+<h:head>
+    <title>Hello World</title>
+</h:head>
+<h:body>
+    <style type="text/css">
+        .top {
+            filter: alpha(opacity=90);
+            opacity: 0.9;
+            padding: 0.2rem 0 0 0.2rem;
+            z-index: 100;
+        }
+        .ui-dialog-notificationbar-icon {
+            float: right;
+            margin: 0 1rem 0 0;
+            top: 0;
+            cursor: pointer;
+        }
+    </style>
+
+    <h:form id="article">
+
+        <div class="card">
+
+            <is:myNotificationBar id="myNotificationBar" position="top" closable="true" minimizable="true" maximizable="true"
+                                  effect="slide" styleClass="top" widgetVar="myNotificationBarWV" autoDisplay="false">
+                <h:outputText value="You Rock!" style="font-size:1.5 rem;"/>
+            </is:myNotificationBar>
+
+            <p:commandButton value="Show" onclick="PF('myNotificationBarWV').show()" type="button" icon="pi pi-arrow-down"/>
+        </div>
+
+
+    </h:form>
+
+
+
+</h:body>
+</html>
